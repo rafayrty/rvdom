@@ -1,0 +1,33 @@
+{
+  "name": "rvdom",
+  "version": "1.0.0",
+  "description": "A lightweight, type-safe virtual DOM implementation for TypeScript with reactive state management",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "npm run build",
+    "build:example": "esbuild examples/counter.ts --bundle --outfile=examples/counter.js --format=esm",
+    "example": "npm run build && npm run build:example && serve examples"
+  },
+  "keywords": [
+    "virtual-dom",
+    "typescript",
+    "reactive",
+    "state-management",
+    "dom",
+    "frontend"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.11.24",
+    "esbuild": "^0.25.2",
+    "serve": "^14.2.1",
+    "typescript": "^5.3.3"
+  }
+}

@@ -2,17 +2,20 @@
   "name": "rvdom",
   "version": "1.0.0",
   "description": "A lightweight, type-safe virtual DOM implementation for TypeScript with reactive state management",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/src/index.js",
+  "module": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "README.md"
   ],
   "scripts": {
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "npm run build",
     "build:example": "esbuild examples/counter.ts --bundle --outfile=examples/counter.js --format=esm",
-    "example": "npm run build && npm run build:example && serve examples"
+    "example": "npm run build && npm run build:example && serve examples",
+    "prepublishOnly": "npm run build"
   },
   "keywords": [
     "virtual-dom",
@@ -20,10 +23,20 @@
     "reactive",
     "state-management",
     "dom",
-    "frontend"
+    "frontend",
+    "framework",
+    "ui"
   ],
-  "author": "",
+  "author": "Rafay",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/rvdom.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/rvdom/issues"
+  },
+  "homepage": "https://github.com/yourusername/rvdom#readme",
   "devDependencies": {
     "@types/node": "^20.11.24",
     "esbuild": "^0.25.2",
